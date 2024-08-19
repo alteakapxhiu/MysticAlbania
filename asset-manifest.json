@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/MysticAlbania/static/css/main.5d8fd5e2.css",
-    "main.js": "/MysticAlbania/static/js/main.6e2fa1ff.js",
+    "main.js": "/MysticAlbania/static/js/main.034d95f8.js",
     "static/js/453.0ef6c71b.chunk.js": "/MysticAlbania/static/js/453.0ef6c71b.chunk.js",
     "static/media/fa-solid-900.ttf": "/MysticAlbania/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
     "static/media/TourLogo.png": "/MysticAlbania/static/media/TourLogo.b490352f50d33a1045ec.png",
@@ -14,11 +14,11 @@
     "static/media/fa-v4compatibility.woff2": "/MysticAlbania/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
     "index.html": "/MysticAlbania/index.html",
     "main.5d8fd5e2.css.map": "/MysticAlbania/static/css/main.5d8fd5e2.css.map",
-    "main.6e2fa1ff.js.map": "/MysticAlbania/static/js/main.6e2fa1ff.js.map",
+    "main.034d95f8.js.map": "/MysticAlbania/static/js/main.034d95f8.js.map",
     "453.0ef6c71b.chunk.js.map": "/MysticAlbania/static/js/453.0ef6c71b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5d8fd5e2.css",
-    "static/js/main.6e2fa1ff.js"
+    "static/js/main.034d95f8.js"
   ]
 }

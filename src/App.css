@@ -36,3 +36,1114 @@
     transform: rotate(360deg);
   }
 }
+
+/*--------NavBar.css------- */
+
+.custom-navbar {
+  background-color: #ffffff; 
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; 
+  transition: background-color 0.3s ease; 
+}
+
+.custom-navbar.scrolled {
+  background-color: #61bcf1dd;
+
+}
+
+
+/*---------- Event Map CSS -----------*/
+
+
+img.AlbMap {
+  width: 50%;         
+  height: auto;       
+  display: block;     
+  margin: 0 auto;     
+}
+
+
+.Container {
+  padding: 0;       
+  justify-content: center; 
+}
+
+
+@media (max-width: 768px) {
+  img.AlbMap {
+    width: 90%;       
+  }
+}
+
+
+@media (max-width: 480px) {
+  img.AlbMap {
+    width: 100%; 
+    height: 100%;   
+  }
+}
+
+/*----- Banner.css ------*/
+
+.custom-carousel .carousel-inner {
+  height: 740px; 
+  transition: opacity 1s ease-in-out;
+
+}
+
+.custom-carousel .carousel-item img {
+  height: 100%; 
+  transition: opacity 1s ease-in-out;
+
+  object-fit: cover; 
+}
+
+
+.CarouselCaption {
+  background-color: #ffffff56;
+  position: absolute;
+  bottom: 50%; 
+  transition: opacity 5s ease-in-out;
+
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff; 
+  width: 80%; 
+  box-sizing: border-box; 
+}
+
+.CarouselCaption h3 {
+  margin: 0;
+ padding-top: 50px;
+  font-size: 50px; 
+}
+
+.CarouselCaption p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 20px; /* Base font size */
+}
+
+/* Styles for the button */
+.CarouselCaption button {
+  position: relative; /* Needed for the sliding effect */
+  margin: 20px 0; /* Space above and below the button */
+  overflow: hidden; /* Ensure the sliding effect stays within the button */
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-color: rgb(255, 255, 255);
+  padding: 12px 24px; /* Adjust padding */
+  font-weight: 700;
+  font-size: 18px; /* Adjust font size */
+  letter-spacing: 0.8px;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none; /* Remove underline from links */
+  background-color: transparent; /* Ensure button has no background */
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.CarouselCaption button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;background-color: #ffffff62;
+ transform: translateX(-100%); /* Initially hidden off-screen */
+  transition: transform 0.3s ease;    
+}
+
+.CarouselCaption button:hover {
+  color: #ffffff;
+  border-color: rgb(73, 201, 255);
+}
+
+.CarouselCaption button:hover::after {
+  transform: translateX(0); 
+}
+.custom-carousel .carousel-control-prev,
+.custom-carousel .carousel-control-next {
+  display: none; /* Hide the carousel arrows */
+}
+.custom-carousel .carousel-indicators {
+  display: none; /* Hide the carousel pagination (indicators) */
+}
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .custom-carousel .carousel-inner {
+    height: 740px;
+    transition: opacity 1s ease-in-out;
+    margin-top: 30%;
+  }
+  
+  .custom-carousel .carousel-item img {
+    height: 100%;
+    transition: opacity 1s ease-in-out;
+    object-fit: contain;
+  }
+  
+  .CarouselCaption {
+    width: 90%; /* Adjust width for smaller screens */
+    background-color: transparent;
+    margin-top: 35%; /* Adjust vertical position */
+  }
+  
+  .CarouselCaption h3 {
+    margin: 0;
+    margin-top: 67px;
+    font-size: 20px; /* Base font size */
+  }
+  
+  .CarouselCaption p {
+    font-size: 8px; /* Base font size */
+  }
+  
+  .CarouselCaption button {
+    padding: 20px; /* Adjust padding for smaller screens */
+    font-size: 10px; /* Adjust font size for smaller screens */
+  }
+}
+
+
+@media (max-width: 576px) {
+  .CarouselCaption {
+    bottom: 30%; /* Further adjust vertical position for very small screens */
+  }
+
+  .CarouselCaption h3 {
+    font-size: 24px; /* Further adjust font size */
+  }
+
+  .CarouselCaption p {
+    font-size: 14px; /* Further adjust font size */
+  }
+
+  .CarouselCaption button {
+    padding: 8px 16px; /* Further adjust padding */
+    font-size: 14px; /* Further adjust font size */
+  }
+}
+
+/* Slide-in Animation CSS */
+.slide-in {
+  opacity: 0;
+  transform: translateY(100px); 
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slide-in.visible {
+  opacity: 1;
+  transform: translateY(0); 
+}
+
+/* Fade-in Animation CSS */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Card Styles */
+.card {
+  
+  position: relative;
+  display: block;
+  width: 500px;
+  height: 200px;
+  margin: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  color: inherit;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-img {
+  
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.card:hover .card-img {
+  transform: scale(1.1);
+}
+
+.card-content {
+
+  padding: 15px;
+  text-align: center;
+}
+
+.card-title {
+  position: absolute;
+  top: 50%;
+  text-decoration: none;
+
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #3eb1e7;
+  font-size: 1.5rem;
+  background: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+  padding: 100%;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover .card-title {
+  opacity: 1;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Banner Styles */
+.banner {
+  padding: 10px;
+  background-color: #4face2b1; /* Light background color */
+  color: #ffffffdd; /* Dark text color for contrast */
+  text-align: center; /* Center align text */
+  border-bottom: 1px solid #ddd; /* Optional bottom border */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.banner:hover {
+  background-color: #217db3b9; /* Change to desired hover color */
+  color: #fff; /* Optional: change text color on hover */
+}
+
+.banner a {
+  text-decoration: none; /* Remove underline from anchor tag */
+  color: inherit; /* Ensure text color matches parent */
+}
+
+.banner-title {
+  margin: 0; /* Remove default margin */
+  font-size: 1.5rem; /* Font size for the title */
+  font-weight: bold; /* Bold title text */
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+.mobile{
+  margin-top: -500px;
+}
+
+  .card {
+    width: 95%; /* Full width on smaller screens */
+    margin: 10px; /* Reduce margin */
+  }
+
+  .card-title {
+    font-size: 1.2rem; /* Smaller font size for mobile */
+    padding: 8px; /* Adjust padding for mobile */
+    position: absolute;
+  top: 50%;
+  text-decoration: none;
+
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #3eb1e7;
+  font-size: 1.5rem;
+  background: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+  padding: 100%;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .banner {
+    padding: 15px 10px; /* Adjust padding for mobile */
+  }
+
+  .banner-title {
+    font-size: 1.2rem; /* Smaller font size for mobile */
+  }
+}
+
+
+/* Slide-in Animation */
+.slide-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.slide-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+/*----ALBTOPGEMS CARDSS CSS-----*/
+
+#castles {
+  display: flex;
+  flex-wrap: wrap; /* Allows cards to wrap to the next line if needed */
+  gap: 2rem; /* Space between cards */
+}
+#cities {
+  display: flex;
+  flex-wrap: wrap; /* Allows cards to wrap to the next line if needed */
+  gap: 2rem; /* Space between cards */
+}
+
+#Cafees{
+  display: flex;
+  flex-wrap: wrap; /* Allows cards to wrap to the next line if needed */
+  gap: 2rem; /* Space between cards */
+}
+#More{
+  display: flex;
+  flex-wrap: wrap; /* Allows cards to wrap to the next line if needed */
+  gap: 2rem; /* Space between cards */
+}
+.card-hover {
+  width: 300px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 32px -10px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s cubic-bezier(.1, .72, .4, .97);
+  margin-bottom: 1rem; /* Ensure spacing at the bottom of each card */
+}
+
+.card-hover:hover .card-hover__content {
+  background-color: #b6e2f9dd;
+  bottom: 100%;
+  transform: translateY(100%);
+  padding: 40px 40px;
+}
+
+.card-hover:hover .card-hover__link {
+  opacity: 1;
+  transform: translate(-50%, 0);
+  transition: all 0.3s 0.35s cubic-bezier(.1, .72, .4, .97);
+}
+
+.card-hover:hover img {
+  transform: scale(1);
+  transition: 0.35s 0.1s transform cubic-bezier(.1, .72, .4, .97);
+}
+
+.card-hover__content {
+  width: 100%;
+  text-align: center;
+  background-color: #4b9ac8ef;
+  padding: 0 60px 50px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(0);
+  transition: all 0.35s 0.35s cubic-bezier(.1, .72, .4, .97);
+  will-change: bottom, background-color, transform, padding;
+  z-index: 1;
+}
+
+.card-hover__content::before,
+.card-hover__content::after {
+  content: '';
+  width: 100%;
+  height: 120px;
+  background-color: inherit;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+}
+
+.card-hover__content::before {
+  top: -80px;
+  clip-path: ellipse(60% 80px at bottom center);
+}
+
+.card-hover__content::after {
+  bottom: -80px;
+  clip-path: ellipse(60% 80px at top center);
+}
+
+.card-hover__title {
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+}
+
+.card-hover__title span {
+  color: #204052dd;
+}
+
+.card-hover__text {
+  font-size: 0.75rem;
+}
+
+.card-hover__link {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translate(-50%, 10%);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #0b1262;
+  opacity: 0;
+  padding: 10px;
+  transition: all 0.35s;
+}
+
+.card-hover__link:hover svg {
+  transform: translateX(4px);
+}
+
+.card-hover__link svg {
+  width: 18px;
+  margin-left: 4px;
+  transition: transform 0.3s;
+}
+
+.card-hover__extra {
+  height: 50%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: #86b971;
+  padding: 80px;
+  bottom: 0;
+  z-index: 0;
+  color: #dee8c2;
+  transform: translateY(100%);
+  will-change: transform;
+  transition: transform 0.35s;
+}
+
+.card-hover__extra span {
+  color: #2d7f0b;
+}
+
+.card-hover img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+  transform: scale(1.2);
+  transition: 0.35s 0.35s transform cubic-bezier(.1, .72, .4, .97);
+}
+
+@media (max-width: 768px) {
+  .card-hover {
+    width: 350px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 32px -10px rgba(0, 0, 0, 0.08);
+    transition: all 0.35s cubic-bezier(.1, .72, .4, .97);
+    margin-bottom: 1rem; /* Ensure spacing at the bottom of each card */
+  
+  margin-left: 12px;}
+}
+
+
+
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9); 
+  }
+  to {
+    opacity: 1;
+    transform: scale(1); 
+  }
+}
+
+
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  margin-top: 7%;
+  overflow: hidden; 
+}
+
+.map {
+  height: 100%;
+  width: 100%;
+  background-image: url('https://www.worldmaphd.com/albania/albania-map.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.marker {
+  position: absolute;
+  background-color: rgb(13, 35, 101);
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 1vw;
+  height: 1vw;
+}
+
+.location-name {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.327);
+  padding: 2px 5px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  cursor: default;
+  color: #314384;
+}
+
+.details-overlay {
+  position: absolute;
+  top: 5%;
+  left: 39%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.897);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  width: 80%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0; 
+  transform: scale(0.9); 
+  animation: zoomIn 0.3s ease-out forwards; 
+}
+
+.details-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.details-content {
+  text-align: center;
+}
+
+.details-overlay h4 {
+  margin: 10px 0;
+  font-size: 1.5rem;
+}
+
+.details-overlay p {
+  font-size: 1rem;
+}
+
+.details-overlay button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #4270a5c6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.details-overlay button:hover {
+  background-color: #073362;
+}
+
+
+@media (max-width: 768px) {
+  .map-container {
+    height: 100vh;
+    overflow-x: hidden; 
+  }
+
+  .map {
+    height: 100%;
+    width: 290%;
+    margin-top: 0%;
+    margin-left: -90%;
+    background-image: url('https://www.worldmaphd.com/albania/albania-map.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+  }
+
+  .marker {
+    width: 6vw;
+    height: 6vw;
+    margin-top: -1.5%;
+    margin-left: -3%;
+    background-color: rgb(13, 35, 101);
+  }
+
+  .location-name {
+    overflow-x: hidden; 
+    margin-left: -5%;
+    margin-top: -8%;
+    font-size: 3vw;
+    padding: 1vw 2vw;
+    color: #314384;
+    background-color: rgba(255, 255, 255, 0.327);
+  }
+
+  .details-overlay {
+    position: absolute;
+    top: 20%;
+    left: 33%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 80%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1;
+    opacity: 0;
+    transform: scale(0.9); 
+    animation: zoomIn 0.3s ease-out forwards; 
+  }
+}
+
+
+
+/*-----MAGAZINE---------*/
+
+.article-card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+}
+
+.article-card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.article-card-body {
+  padding: 20px;
+}
+
+.article-card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.article-card-text {
+  color: #666;
+  font-size: 1rem;
+}
+
+/*----advert css-----*/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+.advert {
+  padding: 2rem;
+  background-color: #f4f4f4;
+  position: relative;
+}
+
+.advert-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.advert-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0rem;
+}
+
+.advert-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0rem;
+}
+
+.advert-view-all {
+  display: inline-block;
+  font-size: 0.875rem;
+  color: #007bff;
+  text-decoration: none;
+  margin-top: 0rem;
+}
+
+.advert-view-all:hover {
+  text-decoration: underline;
+}
+
+.advert-content {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.advert-main-card {
+  flex: 2;
+  position: relative;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1rem;
+  height: 850px;
+}
+
+.advert-main-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #61bcf13f;
+}
+
+.advert-main-img {
+  width: 110%;
+  height: auto;
+}
+
+.advert-card-info {
+  margin-top: 4rem;
+}
+
+.advert-category {
+  font-size: 1rem;
+  color: #007bff;
+  margin-bottom: 0.5rem;
+}
+
+.advert-title {
+  font-size: 120%;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.advert-duration {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.advert-card-like {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: #ccc;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.advert-card-like.liked {
+  color: #ff007f;
+}
+.advert-card-like:hover {
+  transform: scale(1.2); /* Slight enlargement when hovered */
+}
+
+
+.advert-side-cards {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.advert-side-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.advert-side-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #61bcf13c;
+}
+
+.advert-side-img {
+  width: 30%;
+  height: auto;
+}
+
+.advert-side-card .advert-card-info {
+  margin-top: 1rem;
+}
+
+.advert-side-card .advert-card-like {
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.25rem;
+}
+
+.advert-title-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: 768px) {
+  .advert {
+    padding: 1rem;
+  }
+
+  .advert-title {
+    font-size: 1.5rem;
+  }
+
+  .advert-description {
+    font-size: 0.875rem;
+  }
+
+  .advert-content {
+    flex-direction: column;
+  }
+
+  .advert-main-card {
+    height: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  .advert-side-cards {
+    flex-direction: row;
+    gap: 1rem;
+    overflow-x: auto;
+  }
+
+  .advert-side-card {
+    flex: 1 1 45%;
+    min-width: 45%;
+    margin-bottom: 1rem;
+  }
+
+  .advert-side-img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .advert-title {
+    font-size: 1.25rem;
+  }
+
+  .advert-description {
+    font-size: 0.75rem;
+  }
+
+  .advert-view-all {
+    font-size: 0.75rem;
+  }
+
+  .advert-card-info {
+    margin-top: 2rem;
+  }
+
+  .advert-side-cards {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .advert-side-card {
+    flex: 1 1 100%;
+    min-width: 100%;
+  }
+}
+
+
+/*------Flag CSS ------*/
+
+.flag {
+  background-image: url('https://example.com/flag-image.jpg'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.flag-content h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.flag-content p {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.flag-btn {
+  padding: 10px 20px;
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.flag-btn:hover {
+  background-color: #ff4500;
+}
+
+
+/*----LOGIN CSS----*/
+.bg-image-vertical {
+  position: relative;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: auto 100%;
+  }
+  
+  @media (min-width: 1025px) {
+  .h-custom-2 {
+  height: 100%;
+  }
+  .LOGIN {
+    margin-top: -55%;
+  }
+  }
+  
+
+
+  .responsive-iframe-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+  }
+  
+  .responsive-iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  /* styles.css */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+
+/*-----CITIES CSS ---- */
+
+.project-info-box {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .project-info-box {
+    margin-bottom: 0.75rem;
+    padding: 0.75rem;
+    
+    border-width: 1px;
+    font-size: 0.875rem; 
+  }
+  .project-title{
+    margin-top: 25%;
+  }
+  
+}
+
+@media (max-width: 576px) {
+  .project-info-box {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-width: 1px;
+    font-size: 0.75rem; 
+  }
+
+}
+
+
+
+.btn-icon {
+  font-size: 1rem;
+  color: #fff;
+}
+
+
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}

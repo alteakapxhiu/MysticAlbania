@@ -7,5 +7,5 @@
 
 # Watch a demo of the website in action:
 
-[![Watch the demo](https://i.imghippo.com/files/pYjWc1724078751.png)
-](https://youtu.be/T9_lZm-4Ydc?si=hf_NDYUo5FattsMU)
+[![Watch the demo](https://i.imghippo.com/files/u07ms1724165713.png)
+](https://youtu.be/a0tRKgRcIcw?si=yhrc33FPxNiZ1Gv_)
